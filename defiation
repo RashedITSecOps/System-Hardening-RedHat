@@ -1,0 +1,14 @@
+20:13:24     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+20:13:24     all    0.31    0.01    0.30    0.09    0.00    0.13    0.00    0.00    0.00   99.17
+CPU	CPU identifier (all = average of all CPUs)
+%usr	Time spent in user space (non-kernel apps)
+%nice	Time spent on niced (low-priority) user processes
+%sys	Time spent in kernel space (system calls, drivers)
+%iowait	Time the CPU was waiting for I/O to complete
+%irq	Time spent servicing hardware interrupts
+%soft	Time spent servicing software interrupts
+%steal	Time stolen by the hypervisor (e.g., in a VM)
+%guest	Time running guest OSes under virtualization
+%gnice	Time for niced guest processes
+%idle	Time the CPU was completely idle
+
