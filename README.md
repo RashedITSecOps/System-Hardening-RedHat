@@ -96,9 +96,6 @@ nano /home/system-info-welcome.sh
 #!/bin/bash
 S="************************************"
 D="-------------------------------------"
-MOUNT=$(mount|egrep -iw "ext4|ext3|xfs|gfs|gfs2|btrfs"|sort -u -t' ' -k1,2)
-FS_USAGE=$(df -PTh|egrep -iw "ext4|ext3|xfs|gfs|gfs2|btrfs"|sort -k6n|awk '!seen[$1]++')
-IUSAGE=$(df -PThi|egrep -iw "ext4|ext3|xfs|gfs|gfs2|btrfs"|sort -k6n|awk '!seen[$1]++')
 #--------Checking the availability of sysstat package..........#
 if [ ! -x /usr/bin/mpstat ]
 then
