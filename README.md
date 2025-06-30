@@ -1,2 +1,2 @@
-### system-and-security-hardening-redhat
+#system-and-security-hardening-redhat
 
