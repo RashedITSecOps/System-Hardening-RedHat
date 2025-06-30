@@ -24,12 +24,13 @@ user1   ALL=(ALL:ALL) ALL
 ### Configure the SSH service for secure remote login
 ```shell
 nano /etc/ssh/sshd_config
-Port xxxx                                  #use custom port, e.g. 3914
+Port xxxx                                  #Use custom port, e.g. 3914
+IgnoreRhosts yes                           #ignore rhosts/shosts trusted based authentication 
 LogLevel INFO
 PermitRootLogin no
 PermitEmptyPasswords no
 PasswordAuthentication no
 PubkeyAuthentication yes
-ChallengeResponseAuthentication yes
-X11Forwarding no
+ChallengeResponseAuthentication yes       #Enables PAM/OTP/etc.auth mechanisms 
+X11Forwarding no                          #Disables GUI app forwarding
 ```
