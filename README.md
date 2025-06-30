@@ -28,7 +28,7 @@ user1   ALL=(ALL:ALL) ALL
 ### Configure the SSH service for secure remote login
 ```shell
 nano /etc/ssh/sshd_config
-Port xxxx                                  #Use custom port, e.g. 3914
+Port xxxx                                  #Use custom port, e.g. 3917
 IgnoreRhosts yes                           #Ignore rhosts/shosts trusted based authentication 
 LogLevel INFO
 PermitRootLogin no
@@ -65,7 +65,19 @@ ServerActive=[zabbix-server-ip]
 Hostname=[new-system-hostname]
 ```
 f. Start Zabbix agent2 process
-```
+```shell
 systemctl restart zabbix-agent2
 systemctl enable zabbix-agent2
 ```
+
+### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into FirewallD [For VPS/On-prem-VM] 
+```shell
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="3917" protocol="tcp" accept'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="10050-10051" protocol="tcp" accept'
+firewall-cmd --reload
+firewall-cmd --list-all
+```
+# OR
+### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into Security Group [For AWS VM]  
+
+
