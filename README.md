@@ -9,7 +9,7 @@ Generate ssh-keygen in the user's workstation
 ```shell
 ssh-keygen -t rsa -b 2048 
 ```
-Copy and paste the id_rsa.pub file Key content and save into the new system.
+Store user's id_rsa.pub key file content into the new system.
 ```shell
 nano /home/<your_user_name>/.ssh/authorized_keys 
 ```
