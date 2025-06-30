@@ -4,6 +4,21 @@
 ```shell
 hostnamectl set-hostname xxxxxxxxxxxx
 ```
+### List Software/Packages and removed/disable don't required
+```shell
+rpm -qa --qf '%{NAME} %{VERSION} %{VENDOR}\n'
+
+Systemctl stop <Service-Name>
+
+Systemctl disable <Service-Name>
+```
+### Minimize Open Ports and Other Network Vulnerabilities
+```shell
+ss -tulpn state listening | awk '{print "IP-Port "$4" PID/Name "$7}'
+```
+
+
+
 ### Add system users like : user1, user2, user3, ....
 ```shell
 mkdir /home/<user1>/.ssh
