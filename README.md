@@ -4,7 +4,7 @@
 ```shell
 hostnamectl set-hostname xxxxxxxxxxxx
 ```
-### List Software/Packages and removed/disable don't required
+### List Software/Packages and removed/disable not required
 ```shell
 rpm -qa --qf '%{NAME} %{VERSION} %{VENDOR}\n'
 
