@@ -1,3 +1,7 @@
+#!/bin/bash
+S="************************************"  => is a Bash variable assignment where S holds a string of asterisks (used as a visual separator).
+D="-------------------------------------" => is defining a Bash string variable named D that holds a line of dashes
+
 20:13:24     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
 20:13:24     all    0.31    0.01    0.30    0.09    0.00    0.13    0.00    0.00    0.00   99.17
 CPU	CPU identifier (all = average of all CPUs)
