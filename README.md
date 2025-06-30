@@ -77,7 +77,7 @@ firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" sourc
 firewall-cmd --reload
 firewall-cmd --list-all
 ```
-# OR
+## OR
 ### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into Security Group [For AWS VM]  
 
 
