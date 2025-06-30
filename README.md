@@ -1,4 +1,8 @@
 # System-and-Security-Hardening-RedHat/AlmaLinux/RockyLinux/CentOS
-#### On bare-metal installations, ensure  create separate partitions for the /boot, /, /home, /tmp, and /var/tmp/ directories
+1. Add system users like : user1, user2, user3, ....
+...bash
+mkdir /home/<your_user_name>/.ssh
+vim /home/<your_user_name>/.ssh/authorized_keys
+
 
 
