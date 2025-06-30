@@ -11,13 +11,16 @@ rpm -qa --qf '%{NAME} %{VERSION} %{VENDOR}\n'
 Systemctl stop <Service-Name>
 
 Systemctl disable <Service-Name>
+
+dnf -y autoremove
 ```
 ### Minimize Open Ports and Other Network Vulnerabilities
 ```shell
 ss -tulpn state listening | awk '{print "IP-Port "$4" PID/Name "$7}'
 ```
 
-
+### Patch and update promptly
+dnf -y update
 
 ### Add system users like : user1, user2, user3, ....
 ```shell
