@@ -5,7 +5,11 @@ mkdir /home/<your_user_name>/.ssh
 vim /home/<your_user_name>/.ssh/authorized_keys)
 vim /home/<your_user_name>/.ssh/authorized_keys
 ```
-Paste the id_rsa.pub file Key content and save.
+Generate ssh-keygen in the user's workstation 
+```shell
+ssh-keygen -t rsa -b 2048 
+```
+Copy and paste the id_rsa.pub file Key content and save into the new system.
 ```shell
 nano /home/<your_user_name>/.ssh/authorized_keys 
 ```
