@@ -70,16 +70,6 @@ systemctl restart zabbix-agent2
 systemctl enable zabbix-agent2
 ```
 
-### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into FirewallD [For VPS/On-prem-VM] 
-```shell
-firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="3917" protocol="tcp" accept'
-firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="10050-10051" protocol="tcp" accept'
-firewall-cmd --reload
-firewall-cmd --list-all
-```
-### OR
-### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into Security Group [For AWS VM]  
-
 ### User Command Logging
 ```shell
 # Configure user command execution log, For BASH shells, edit the system-wide BASH runtime config file, append the below line.
@@ -186,3 +176,12 @@ echo -e "\nCurrent Processor Utilization Summary :\n"
 mpstat|tail -2
 ```
 
+### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into FirewallD [For VPS/On-prem-VM] 
+```shell
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="3917" protocol="tcp" accept'
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" port port="10050-10051" protocol="tcp" accept'
+firewall-cmd --reload
+firewall-cmd --list-all
+```
+### OR
+### Allow required IPs and Ports (for SSH custom port, Zabbix-agent2 etc.) into Security Group [For AWS VM]  
