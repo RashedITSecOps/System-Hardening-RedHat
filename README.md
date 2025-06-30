@@ -6,7 +6,7 @@ mkdir /home/<user1>/.ssh
 vim /home/<your_user_name>/.ssh/authorized_keys)
 vim /home/<your_user_name>/.ssh/authorized_keys
 ```
-Generate ssh-keygen in the user's workstation. 
+Create an SSH Key Pair for user1 (in user1's workstation). 
 ```shell
 ssh-keygen -t rsa -b 2048 
 ```
